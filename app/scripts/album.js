@@ -51,7 +51,7 @@ var createSongRow = function(songNumber, songName, songLength) {
 		var onHover = function(event) {
 			var songNumberCell = $(this).find('.song-number');
 			var songNumber = songNumberCell.data('song-number');
-			if (songNumber !-- currentlyPlayingSong) {
+			if (songNumber != currentlyPlayingSong) {
 				songNumberCell.html('<a class="album-song-button"><i class= fa fa play"></i></a>');
 			}
 		};
