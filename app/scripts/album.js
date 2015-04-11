@@ -103,36 +103,9 @@ var createSongRow = function(songNumber, songName, songLength) {
 	if (document.URL.match(/\/album.html/)) {
 		// Wait until the HTML is fully processed.
 		$(document).ready(function() {
-			var changeAlbumView = function(album) {
-				// Update the album title
-				var $albumTitle = $('.album-title');
-				$albumTitle.text(album.name);
-
-				// Update the album artist
-				var $albumArtist = $('.album-artist');
-				$albumArtist.text(album.artist);
-
-				// Update the meta information
-				var $albumMeta = $('.album-meta-info');
-				$albumMeta.text(album.year + " on " + album.label);
-
-				// Update the album image
-				var $albumImage = $('.album-image img');
-				$albumImage.attr('src', album.albumArtUrl);
-
-				// Update the Song List
-				var $songList = $(".album-song-listing");
-				$songList.empty();
-				var songs = album.songs;
-				for (var i = 0; i < songs.length; i++) {
-					var songData = songs[i];
-					var $newRow = createSongRow(i + 1, songData.name, songData.length);
-					$songList.append($newRow);
-			}
-
 			changeAlbumView(albumPicasso);
-		});
-	}
+			};
+		}
 
 
 
