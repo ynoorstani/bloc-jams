@@ -103,8 +103,9 @@ var createSongRow = function(songNumber, songName, songLength) {
 	if (document.URL.match(/\/album.html/)) {
 		// Wait until the HTML is fully processed.
 		$(document).ready(function() {
+
 			changeAlbumView(albumPicasso);
-			};
+			});
 		}
 
 
